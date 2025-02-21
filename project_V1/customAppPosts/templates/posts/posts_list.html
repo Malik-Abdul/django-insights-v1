@@ -1,0 +1,13 @@
+{% extends 'layout.html' %} 
+{% block title %} Posts List {% endblock %} 
+{% block content %}
+<section>
+  <h2>Posts List order by date created desc</h2>
+  {% for post in posts %}
+  <article class="post">
+    <div><strong>{{post.title}}</strong> - {{post.date}} </div>
+    <p>{{post.body}}</p>
+  </article>
+  {% endfor %}
+</section>
+{% endblock %}
