@@ -1,0 +1,11 @@
+{% extends 'layout.html' %} 
+{% block title %} 
+  {{post.title}} 
+{% endblock %} 
+{% block content %}
+<section>
+  <h2>Post: {{post.title}}</h2>
+    <div><strong>{{post.title}}</strong> - {{post.date}} </div>
+    <p>{{post.body}}</p>
+</section>
+{% endblock %}

@@ -5,7 +5,7 @@
   <h2>Posts List order by date created desc</h2>
   {% for post in posts %}
   <article class="post">
-    <div><strong>{{post.title}}</strong> - {{post.date}} </div>
+    <div><strong><a href="{% url 'posts:page' slug=post.slug%}">{{post.title}}</a></strong> - {{post.date}} </div>
     <p>{{post.body}}</p>
   </article>
   {% endfor %}
