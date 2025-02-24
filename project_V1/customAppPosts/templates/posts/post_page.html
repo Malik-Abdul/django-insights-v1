@@ -4,6 +4,7 @@
 {% endblock %} 
 {% block content %}
 <section>
+  <img class="banner" src="{{post.banner.url}}" alt="{{post.title}}" />
   <h2>Post: {{post.title}}</h2>
     <div><strong>{{post.title}}</strong> - {{post.date}} </div>
     <p>{{post.body}}</p>
