@@ -17,6 +17,9 @@ quit()
 start projetc: django-admin startproject project_V1
 cd project_V1
 python3 manage.py runserver 9000
+
+# help for using images
+pip install pillow
 ```
 
 ## Migration
@@ -52,4 +55,18 @@ User: Admin
 Email: admin
 Pass: standared
 
+```
+
+## Images
+
+```bash
+#settings:
+MEDIA_URL = 'custom_media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'custom_media')
+# add a new field in post model
+banner = models.ImageField(default='fallback.png', blank=True)
+# make migration
+python3 manage.py makemigrations
+# migrate to apply changes
+python3 manage.py migrate
 ```
