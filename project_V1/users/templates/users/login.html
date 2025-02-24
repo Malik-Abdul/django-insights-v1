@@ -1,0 +1,15 @@
+{% extends 'layout.html' %} 
+{% block title %} 
+ User Login
+{% endblock %} 
+{% block content %}
+<section>
+  <img class="banner" src="{{post.banner.url}}" alt="{{post.title}}" />
+  <h2>User Login</h2>
+  <form class="form-with-validation" action="/users/login/" method="post">
+   {% csrf_token %}
+    {{form}}
+    <button class="form-submit">submit</button>
+  </form>
+</section>
+{% endblock %}
